@@ -1,11 +1,11 @@
 <script setup lang="ts">
-/*import { ref } from "vue";
+import { ref } from "vue";
 
 
 const menu_items = ref([
-    { label: "Home", route: "/" },
-    { label: "Sandbox", route: "/sandbox" }
-]);*/
+    { id: 1, label: "Home", route: "/" },
+    { id: 2, label: "About", route: "/about" },
+]);
 
 </script>
 
@@ -18,15 +18,9 @@ const menu_items = ref([
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
       <a class="navbar-brand" href="#">Hidden brand</a>
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav" v-for="item in menu_items" :key="item.id">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+          <RouterLink class="nav-link" :to="item.route">{{ item.label }}</RouterLink>
         </li>
       </ul>
     </div>
