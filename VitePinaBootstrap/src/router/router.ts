@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 import Home from '../components/Home.vue'
 
-const about = () => { import("../components/About.vue"); };
+const about = () => { return import("../components/About.vue"); };
 
 
 const routes = [
@@ -19,7 +19,8 @@ const routes = [
 ]
 
 const router = createRouter({
-    history: createWebHistory(), 
+    history: createWebHistory(),
+    linkActiveClass: "router-link-active active",
     
     routes: routes
 });
