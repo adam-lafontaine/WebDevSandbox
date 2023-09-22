@@ -1,11 +1,8 @@
-// Import our custom CSS
-//import './scss/styles.scss'
-
-// Import all of Bootstrap's JS
-//import * as bootstrap from 'bootstrap'
+import './styles/bootstrap.scss'
+import * as bootstrap from 'bootstrap'
 
 
-import 'primevue/resources/themes/bootstrap4-light-blue/theme.css'
+//import 'primevue/resources/themes/bootstrap4-light-blue/theme.css'
 //import 'primevue/resources/themes/bootstrap4-light-purple/theme.css'
 //import 'primevue/resources/themes/bootstrap4-dark-blue/theme.css'
 //import 'primevue/resources/themes/bootstrap4-dark-purple/theme.css'
@@ -45,32 +42,37 @@ import 'primevue/resources/themes/bootstrap4-light-blue/theme.css'
 //import 'primevue/resources/themes/arya-orange/theme.css'
 //import 'primevue/resources/themes/arya-purple/theme.css'
 
-import 'primeicons/primeicons.css';
+//import 'primeicons/primeicons.css';
 
 
 import { createApp } from 'vue'
-
-import PrimeVue from 'primevue/config';
-
+import router from './router/router'
 import { createPinia } from 'pinia'
-const pinia = createPinia()
+//import PrimeVue from 'primevue/config';
 
 //import './style.css'
 //import HWApp from './HWApp.vue'
 //const app = createApp(HWApp);
 
-import SBApp from './SBApp.vue'
-const app = createApp(SBApp);
+import App from './App.vue'
+const app = createApp(App);
 
+const pinia = createPinia();
+
+
+//import Menubar from 'primevue/menubar';
 import Card from 'primevue/card';
 import Button from 'primevue/button';
 import Chart from 'primevue/chart';
 
+//app.component('Menubar', Menubar);
 app.component('Card', Card);
 app.component('Button', Button);
 app.component('Chart', Chart);
 
+
 app.use(pinia);
-app.use(PrimeVue);
+//app.use(PrimeVue);
+app.use(router);
 
 app.mount('#app');
