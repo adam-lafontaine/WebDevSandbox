@@ -1,5 +1,5 @@
-import './styles/bootstrap.scss'
-import * as bootstrap from 'bootstrap'
+//import './styles/bootstrap.scss'
+//import * as bootstrap from 'bootstrap'
 
 
 //import 'primevue/resources/themes/bootstrap4-light-blue/theme.css'
@@ -48,7 +48,6 @@ import * as bootstrap from 'bootstrap'
 import { createApp } from 'vue'
 import router from './router/router'
 import { createPinia } from 'pinia'
-//import PrimeVue from 'primevue/config';
 
 //import './style.css'
 //import HWApp from './HWApp.vue'
@@ -61,14 +60,14 @@ const pinia = createPinia();
 
 
 //import Menubar from 'primevue/menubar';
-import Card from 'primevue/card';
-import Button from 'primevue/button';
-import Chart from 'primevue/chart';
+//import Card from 'primevue/card';
+//import Button from 'primevue/button';
+//import Chart from 'primevue/chart';
 
 //app.component('Menubar', Menubar);
-app.component('Card', Card);
-app.component('Button', Button);
-app.component('Chart', Chart);
+//app.component('Card', Card);
+//app.component('Button', Button);
+//app.component('Chart', Chart);
 
 
 app.use(pinia);
