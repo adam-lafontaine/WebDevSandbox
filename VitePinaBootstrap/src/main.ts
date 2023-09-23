@@ -1,5 +1,8 @@
 
+import './styles/bs-theme.scss'
 import './styles/style.css'
+
+import * as bootstrap from 'bootstrap'
 
 
 import { createApp } from 'vue'

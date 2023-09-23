@@ -23,7 +23,7 @@ const counter = useCountingStore();
             <div class="col-12">
                 <button 
                     type="button" 
-                    class="btn btn-primary btn-x"
+                    class="btn btn-primary me-2"
                     @click="counter.increment"
                 >
                     Plus

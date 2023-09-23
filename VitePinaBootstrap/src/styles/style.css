@@ -1,7 +1,3 @@
-.bg-theme {
-    background-color: rgb(183, 18, 32) !important;    
-}
-
 
 .text-white {
     color: white;
@@ -13,9 +9,4 @@
     padding-bottom: 4rem;
     padding-left: 2rem;
     padding-right: 2rem;    
-}
-
-
-.btn-x {
-    margin-right: 0.5rem;
 }

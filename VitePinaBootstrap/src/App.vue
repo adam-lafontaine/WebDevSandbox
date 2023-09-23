@@ -11,7 +11,7 @@ const menu_items = ref([
 
 
 <template>
-<nav class="navbar navbar-expand-lg navbar-dark bg-theme">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container-fluid">
         <button 
             class="navbar-toggler" 
@@ -38,7 +38,7 @@ const menu_items = ref([
     <RouterView></RouterView>
 </div>
 
-<footer class="text-center text-lg-start fixed-bottom bg-theme text-white footer-padded d-none d-lg-block">
+<footer class="text-center text-lg-start fixed-bottom bg-primary text-white footer-padded d-none d-lg-block">
     <div>
         Footer
     </div>
