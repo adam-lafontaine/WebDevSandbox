@@ -10,7 +10,7 @@ const counter = useCountingStore();
 <template>
 <h1>About</h1>
 
-<div class="card" style="width: 18rem;">
+<div class="card card-width">
     <div class="card-body">
         <h5 class="card-title">Card Title</h5>
         <div class="row">
@@ -23,7 +23,7 @@ const counter = useCountingStore();
             <div class="col-12">
                 <button 
                     type="button" 
-                    class="btn btn-primary"
+                    class="btn btn-primary btn-x"
                     @click="counter.increment"
                 >
                     Plus
@@ -31,21 +31,21 @@ const counter = useCountingStore();
                 <button 
                     type="button" 
                     class="btn btn-primary"
-                    style="margin-left: 0.5rem"
                     @click="counter.decrement"
                 >
                     Minus
                 </button>
             </div>
         </div>
-        
-
-        
     </div>
 </div>
-    
+
 </template>
 
 
 <style scoped>
+
+.card-width {
+    width: 18rem;
+}
 </style>

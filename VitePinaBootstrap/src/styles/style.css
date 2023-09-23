@@ -1,14 +1,21 @@
-.nav-color {
+.bg-theme {
     background-color: rgb(183, 18, 32) !important;    
 }
 
 
-.footer-padding {
+.text-white {
+    color: white;
+}
+
+
+.footer-padded {
     padding-top: 2rem;
     padding-bottom: 4rem;
     padding-left: 2rem;
-    padding-right: 2rem;
+    padding-right: 2rem;    
+}
 
-    color: white;
-    
+
+.btn-x {
+    margin-right: 0.5rem;
 }

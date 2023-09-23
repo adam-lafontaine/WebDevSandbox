@@ -11,13 +11,13 @@ const menu_items = ref([
 
 
 <template>
-<nav class="navbar navbar-expand-lg navbar-dark nav-color">
+<nav class="navbar navbar-expand-lg navbar-dark bg-theme">
     <div class="container-fluid">
         <button 
             class="navbar-toggler" 
             type="button" 
             data-bs-toggle="collapse" 
-            ata-bs-target="#navbarLinks" 
+            data-bs-target="#navbarLinks" 
             aria-controls="navbarLinks" 
             aria-expanded="false" 
             aria-label="Toggle navigation"
@@ -25,7 +25,7 @@ const menu_items = ref([
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarLinks">
-        <a class="navbar-brand" href="#">Brand</a>
+        <a class="navbar-brand d-none d-lg-block" href="#">Brand</a>
         <ul class="navbar-nav" v-for="item in menu_items" :key="item.id">
             <li class="nav-item">
                 <RouterLink class="nav-link" :to="item.route">{{ item.label }}</RouterLink>
@@ -37,11 +37,13 @@ const menu_items = ref([
 <div class="container">
     <RouterView></RouterView>
 </div>
-<footer class="bg-info text-center text-lg-start fixed-bottom nav-color footer-padding">
+
+<footer class="text-center text-lg-start fixed-bottom bg-theme text-white footer-padded d-none d-lg-block">
     <div>
         Footer
     </div>
 </footer>
+
 </template>
 
 
