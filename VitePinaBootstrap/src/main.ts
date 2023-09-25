@@ -2,7 +2,11 @@
 import './styles/bs-theme.scss'
 import './styles/style.css'
 
-import * as bootstrap from 'bootstrap'
+// as per Bootstrap docs (https://getbootstrap.com/docs/5.2/getting-started/vite/) but broken
+//import * as bootstrap from 'bootstrap'
+
+// this works
+import 'bootstrap'
 
 
 import { createApp } from 'vue'

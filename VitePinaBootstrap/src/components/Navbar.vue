@@ -25,12 +25,12 @@ const menu_items = ref([
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarLinks">
-        <a class="navbar-brand d-none d-lg-block" href="#">Brand</a>
-        <ul class="navbar-nav" v-for="item in menu_items" :key="item.id">
-            <li class="nav-item">
-                <RouterLink class="nav-link" :to="item.route">{{ item.label }}</RouterLink>
-            </li>
-        </ul>
+            <a class="navbar-brand d-none d-lg-block" href="#">Brand</a>
+            <ul class="navbar-nav" v-for="item in menu_items" :key="item.id">
+                <li class="nav-item">
+                    <RouterLink class="nav-link" :to="item.route">{{ item.label }}</RouterLink>
+                </li>
+            </ul>
         </div>
     </div>
 </nav>
