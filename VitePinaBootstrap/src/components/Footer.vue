@@ -18,4 +18,11 @@ const data = ref("Footer");
 
 <style lang="css">
 
+.footer-padded {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    padding-left: 2rem;
+    padding-right: 2rem;    
+}
+
 </style>

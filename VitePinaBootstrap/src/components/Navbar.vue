@@ -2,6 +2,9 @@
 import { ref } from "vue";
 
 
+const brand = "Brand";
+
+
 const menu_items = ref([
     { id: 1, label: "Home", route: { name: "home" } },
     { id: 2, label: "About", route: { name: "about" } },
@@ -13,6 +16,7 @@ const menu_items = ref([
 <template>
 <nav class="navbar bg-primary navbar-expand-lg" data-bs-theme="dark">
     <div class="container-fluid">
+        <RouterLink class="navbar-brand" :to="{name: 'home'}">{{ brand }}</RouterLink>
         <button 
             class="navbar-toggler" 
             type="button" 
@@ -24,11 +28,10 @@ const menu_items = ref([
         >
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarLinks">
-            <a class="navbar-brand d-none d-lg-block" href="#">Brand</a>
-            <ul class="navbar-nav" v-for="item in menu_items" :key="item.id">
-                <li class="nav-item">
-                    <RouterLink class="nav-link" :to="item.route">{{ item.label }}</RouterLink>
+        <div class="collapse navbar-collapse" id="navbarLinks"> 
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item" v-for="item in menu_items" :key="item.id">
+                    <RouterLink class="nav-link text-end" :to="item.route">{{ item.label }}</RouterLink>
                 </li>
             </ul>
         </div>
