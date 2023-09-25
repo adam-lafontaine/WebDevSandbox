@@ -3,15 +3,15 @@ import { ref } from "vue";
 
 
 const menu_items = ref([
-    { id: 1, label: "Home", route: "/" },
-    { id: 2, label: "About", route: "/about" },
+    { id: 1, label: "Home", route: { name: "home" } },
+    { id: 2, label: "About", route: { name: "about" } },
 ]);
 
 </script>
 
 
 <template>
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<nav class="navbar bg-primary navbar-expand-lg" data-bs-theme="dark">
     <div class="container-fluid">
         <button 
             class="navbar-toggler" 

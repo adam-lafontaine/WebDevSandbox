@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useCountingStore } from '../stores/CountingStore'
+import { useCountingStore } from '@stores/CountingStore'
 
 
 const counter = useCountingStore();
@@ -30,11 +30,12 @@ const counter = useCountingStore();
                 </button>
                 <button 
                     type="button" 
-                    class="btn btn-primary"
+                    class="btn btn-primary me-2"
                     @click="counter.decrement"
                 >
                     Minus
                 </button>
+                <button class="btn btn-my-blue">Blue</button>
             </div>
         </div>
     </div>
