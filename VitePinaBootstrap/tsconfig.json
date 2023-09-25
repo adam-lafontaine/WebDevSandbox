@@ -20,7 +20,7 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
 
-    /*  */
+    /* path alias - vite.config.ts */
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
