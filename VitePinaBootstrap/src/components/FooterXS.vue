@@ -20,8 +20,8 @@
 .footer-padded {
     padding-top: 0.5rem;
     padding-bottom: 0.25rem;
-    padding-left: 2rem;
-    padding-right: 2rem;    
+    padding-left: 1rem;
+    padding-right: 1rem;    
 }
 
 

@@ -11,7 +11,16 @@ import FooterXS from '@components/FooterXS.vue'
 <Navbar/>
 
 <div class="container">
-    <RouterView></RouterView>
+    <RouterView/>
+<!--
+    <RouterView v-slot="{Component}">
+        <div>
+            <Transition name="fade" mode="out-in">                
+                    <component :is="Component" :key="$route.path"></component>
+            </Transition>
+        </div>
+    </RouterView>
+-->
 </div>
 
 <Footer class="d-none d-lg-block"/>
@@ -19,6 +28,16 @@ import FooterXS from '@components/FooterXS.vue'
 </template>
 
 
-<style scoped>
+<style scoped lang="css">
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
 
 </style>
