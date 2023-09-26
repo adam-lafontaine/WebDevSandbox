@@ -1,3 +1,4 @@
+import 'material-icons/iconfont/material-icons.css';
 
 import './styles/bs-theme.scss'
 import './styles/style.css'

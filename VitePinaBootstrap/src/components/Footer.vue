@@ -16,7 +16,7 @@ const data = ref("Footer");
 </template>
 
 
-<style lang="css">
+<style scoped lang="css">
 
 .footer-padded {
     padding-top: 2rem;
