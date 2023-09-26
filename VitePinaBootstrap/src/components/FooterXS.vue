@@ -9,7 +9,7 @@
         class="btn btn-primary back-button"
         @click="$router.back()"
     >
-        <span class="material-icons back-button-icon">arrow_back</span>
+        <span class="material-icons-outlined back-button-icon">arrow_back</span>
     </button>    
 </footer>
 </template>

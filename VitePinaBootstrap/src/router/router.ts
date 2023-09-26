@@ -4,8 +4,10 @@ type Route = RouteLocationNormalizedLoaded;
 
 import Home from '@views/Home.vue'
 
-const about = () => { return import("@views/About.vue"); };
-const page = () => { return import("@views/Page.vue"); }
+const About = () => (import("@views/About.vue"));
+const Page = () => (import("@views/Page.vue"));
+const NotFound = () => (import("@views/NotFound.vue"));
+
 
 
 const routes = [
@@ -17,13 +19,18 @@ const routes = [
     { 
         path: "/about", 
         name: "about", 
-        component: about 
+        component: About 
     },
     {
         path: "/page/:id/:slug",
         name: "page",
-        component: page,
+        component: Page,
         props: (r: Route) => ({ page_id: r.params.id, slug: r.params.slug }),
+    },
+    {
+        path: "/:pathMatch(.*)*",
+        name: "notfound",
+        component: NotFound
     }
 ];
 

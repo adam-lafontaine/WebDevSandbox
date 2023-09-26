@@ -8,7 +8,7 @@ const data = ref("Footer");
 
 
 <template>
-<footer class="text-center text-lg-start fixed-bottom bg-primary text-white footer-padded">
+<footer class="text-start fixed-bottom bg-primary text-white footer-padded">
     <div>
         {{ data }}
     </div>
