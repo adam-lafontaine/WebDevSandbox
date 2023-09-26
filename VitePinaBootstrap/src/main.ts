@@ -10,7 +10,7 @@ import 'bootstrap'
 
 
 import { createApp } from 'vue'
-import router from './router/router'
+import { router } from './router/router'
 import { createPinia } from 'pinia'
 
 
@@ -24,4 +24,8 @@ const pinia = createPinia();
 app.use(pinia);
 app.use(router);
 
-app.mount('#app');
+//app.mount('#app');
+
+router.isReady().then(() => {
+    app.mount('#app')
+})

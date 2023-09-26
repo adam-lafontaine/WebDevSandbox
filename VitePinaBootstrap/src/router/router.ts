@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '@views/Home.vue'
 
 const about = () => { return import("@views/About.vue"); };
+const page = () => { return import("@views/Page.vue"); }
 
 
 const routes = [
@@ -16,6 +17,11 @@ const routes = [
         name: "about", 
         component: about 
     },
+    {
+        path: "/page/:id/:slug",
+        name: "page",
+        component: page
+    }
 ]
 
 const router = createRouter({
@@ -26,4 +32,7 @@ const router = createRouter({
 });
 
 
-export default router;
+const get_current_route = () => { return router.currentRoute.value; };
+
+
+export { router, get_current_route };

@@ -7,8 +7,15 @@ const brand = "Brand";
 
 const menu_items = ref([
     { id: 1, label: "Home", route: { name: "home" } },
-    { id: 2, label: "About", route: { name: "about" } },
+    { id: 2, label: "About", route: { name: "about" } }
 ]);
+
+
+const pages = [
+    { id: 1, label: "Page 1", route: { name: "page", params: { id: 1, slug: "page_01" } } },
+    { id: 2, label: "Page 2", route: { name: "page", params: { id: 2, slug: "page_02" } } },
+    { id: 3, label: "Page 3", route: { name: "page", params: { id: 3, slug: "page_03" } } }
+];
 
 </script>
 
@@ -31,6 +38,9 @@ const menu_items = ref([
         <div class="collapse navbar-collapse" id="navbarLinks"> 
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item" v-for="item in menu_items" :key="item.id">
+                    <RouterLink class="nav-link text-end" :to="item.route">{{ item.label }}</RouterLink>
+                </li>
+                <li class="nav-item" v-for="item in pages" :key="item.id">
                     <RouterLink class="nav-link text-end" :to="item.route">{{ item.label }}</RouterLink>
                 </li>
             </ul>
