@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory, RouteLocationNormalizedLoaded } from 'vue-router'
 
-type R = RouteLocationNormalizedLoaded;
+type Route = RouteLocationNormalizedLoaded;
 
 import Home from '@views/Home.vue'
 
@@ -23,9 +23,10 @@ const routes = [
         path: "/page/:id/:slug",
         name: "page",
         component: page,
-        props: (route: R) => ({ page_id: route.params.id, slug: route.params.slug }),
+        props: (r: Route) => ({ page_id: r.params.id, slug: r.params.slug }),
     }
-]
+];
+
 
 const router = createRouter({
     history: createWebHistory(),
