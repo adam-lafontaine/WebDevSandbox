@@ -1,10 +1,10 @@
 <script setup lang="ts">
 //import { ref } from "vue";
-import { get_current_route } from '@/router/router';
 
-
-const page_id = () => { return get_current_route().params.id; };
-const page_slug = () => { return get_current_route().params.slug; };
+const props = defineProps({
+    page_id: { type: String, required: true },
+    slug: { type: String, required: true }
+});
 
 </script>
 
@@ -12,7 +12,7 @@ const page_slug = () => { return get_current_route().params.slug; };
 <template>
 <h3>Page {{ $route.params.id }} / {{ $route.params.slug }}</h3>
 
-<p>Page {{ page_id() }} / {{ page_slug() }}</p>
+<p>Page {{ props.page_id }} / {{ props.slug }}</p>
 
 </template>
 
