@@ -16,3 +16,16 @@ If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has a
    1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
    2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
 2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+
+
+## Node Installation
+
+```
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+nvm --version
+nvm install 20.9.0
+nvm use 20.9.0
+cd WebDevSandbox/VitePinaBootstrap/
+npm install
+npm run dev
+```
